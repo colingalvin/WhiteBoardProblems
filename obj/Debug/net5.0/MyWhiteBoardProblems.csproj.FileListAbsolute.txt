@@ -1,0 +1,16 @@
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.exe
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.deps.json
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.runtimeconfig.json
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.runtimeconfig.dev.json
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.dll
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\ref\MyWhiteBoardProblems.dll
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\bin\Debug\net5.0\MyWhiteBoardProblems.pdb
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.csprojAssemblyReference.cache
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.AssemblyInfoInputs.cache
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.AssemblyInfo.cs
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.csproj.CoreCompileInputs.cache
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.dll
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\ref\MyWhiteBoardProblems.dll
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.pdb
+C:\Users\colingalvin\devCodeCamp\Projects\MyWhiteBoardProblems\obj\Debug\net5.0\MyWhiteBoardProblems.genruntimeconfig.cache
