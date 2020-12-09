@@ -1,9 +1,8 @@
 "use strict";
 
 function fizzbuzz() {
-    let i;
     let response = "";
-    for (i = 0; i <= 100; i++) {
+    for (let i = 0; i <= 100; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             response += "fizzbuzz\n";
         }
@@ -18,4 +17,13 @@ function fizzbuzz() {
         }
     }
     alert(response);
+}
+
+function reverseString() {
+    let userInput = prompt("Please enter a word or phrase: ");
+    let reversedUserInput = "";
+    for (let i = 1; i <= userInput.length; i++) {
+        reversedUserInput += userInput[userInput.length - i];
+    }
+    alert(`Your reversed word or phrase is: ${reversedUserInput}`);
 }

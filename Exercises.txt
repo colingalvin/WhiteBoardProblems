@@ -1,5 +1,20 @@
-1.) Fizzbuzz
+1.) Fizz Buzz
 	-Write a program that prints every number from 0 to 100 to the console
-            -If a number is divisible by 3, print ‘fizz’ instead of the number
-            -If a number is divisible by 5, print ‘buzz’ instead of the number
-            -If a number is divisible by 3 and 5, print ‘fizzbuzz’ instead of the number
+		-If a number is divisible by 3, print ‘fizz’ instead of the number
+		-If a number is divisible by 5, print ‘buzz’ instead of the number
+		-If a number is divisible by 3 and 5, print ‘fizzbuzz’ instead of the number
+
+2.) Reverse a string
+	-Write code that takes a string as input and returns the string reversed
+		i.e. “Hello” will be returned as “olleH”
+
+3.) Capitalize letter
+	-Write code that takes a string as input and capitalize the first letter of each word.
+	-Words will be separated by only one space.
+		i.e. “hello world” should be outputted as “Hello World”
+
+4.) Compress a string of characters
+	-For example, an input of "aaabbbbbccccaacccbbbaaabbbaaa" would compress to "3a5b4c2a3c3b3a3b3a"
+
+5.) Palindrome (a word, phrase, or sequence that reads the same backward as forward i.e. madam)
+	-Write code that takes a user input and checks to see if it is a Palindrome and reports the result

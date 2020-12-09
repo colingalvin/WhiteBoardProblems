@@ -10,4 +10,9 @@ def fizzbuzz():
         else:
             print(n)
 
-fizzbuzz()
+def reverse_string():
+    user_input = input("Please enter a word or phrase: ")
+    print(f"Your reversed word or phrase is: {user_input[::-1]}")
+
+#fizzbuzz()
+reverse_string()
