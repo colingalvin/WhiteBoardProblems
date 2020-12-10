@@ -27,3 +27,16 @@ function reverseString() {
     }
     alert(`Your reversed word or phrase is: ${reversedUserInput}`);
 }
+
+function capitalizeFirstLetters() {
+    let userInput = prompt("Enter words to be capitalized: ");
+    let capitalizedUserInput = "";
+    for(let i = 0; i < userInput.length; i++) {
+        if(i === 0 || userInput[i-1] === " ") {
+            capitalizedUserInput += userInput[i].toUpperCase();
+        } else {
+            capitalizedUserInput += userInput[i];
+        }
+    }
+    alert(`Your capitalized input is: ${capitalizedUserInput}`);
+}

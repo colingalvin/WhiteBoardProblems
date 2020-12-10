@@ -8,7 +8,8 @@ namespace MyWhiteBoardProblems
         static void Main(string[] args)
         {
             //FizzBuzz();
-            ReverseString();
+            //ReverseString();
+            CapitalizeFirstLetters();
         }
 
         public static void FizzBuzz()
@@ -44,6 +45,26 @@ namespace MyWhiteBoardProblems
                 reversedUserInput.Append(userInput[userInput.Length - i]);
             }
             Console.WriteLine($"Your reversed word or phrase is: {reversedUserInput}");
+        }
+
+        public static void CapitalizeFirstLetters()
+        {
+            Console.Write("Enter words to be capitalized: ");
+            string userInput = Console.ReadLine();
+            StringBuilder capitalizedUserInput = new StringBuilder();
+            for (int i = 0; i < userInput.Length; i++)
+            {
+                if (i == 0 || userInput[i - 1] == ' ')
+                {
+                    //forgot to include .ToString()
+                    capitalizedUserInput.Append(userInput[i].ToString().ToUpper());
+                }
+                else
+                {
+                    capitalizedUserInput.Append(userInput[i]);
+                }
+            }
+            Console.WriteLine($"Your capitalized input is: {capitalizedUserInput}");
         }
     }
 }
