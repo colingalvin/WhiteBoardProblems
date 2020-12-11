@@ -25,6 +25,24 @@ def capitalize_first_letters():
             capitalized_user_input += char
     print(f"Your capitalized input is {capitalized_user_input}")
 
+def compress_string():
+    user_input = input("Enter a string of characters to be compressed: ")
+    compressed_user_input = ""
+    counter = 1
+    for i, char in enumerate(user_input):
+        if i == 0:
+            if char != user_input[i+1]:
+                compressed_user_input += f"{counter}{char}"
+        elif char == user_input[i-1]:
+            counter += 1
+        elif i > 1:
+            compressed_user_input += f"{counter}{user_input[i-1]}"
+            counter = 1
+        if i == len(user_input) - 1:
+            compressed_user_input += f"{counter}{char}"
+    print(f"Your compressed input is: {compressed_user_input}")
+
 #fizzbuzz()
 #reverse_string()
-capitalize_first_letters()
+#capitalize_first_letters()
+compress_string()

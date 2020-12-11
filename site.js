@@ -5,14 +5,11 @@ function fizzbuzz() {
     for (let i = 0; i <= 100; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             response += "fizzbuzz\n";
-        }
-        else if (i % 3 === 0) {
+        } else if (i % 3 === 0) {
             response += "fizz\n";
-        }
-        else if (i % 5 === 0) {
+        } else if (i % 5 === 0) {
             response += "buzz\n";
-        }
-        else {
+        } else {
             response += i + "\n";
         }
     }
@@ -39,4 +36,26 @@ function capitalizeFirstLetters() {
         }
     }
     alert(`Your capitalized input is: ${capitalizedUserInput}`);
+}
+
+function compressString() {
+    let userInput = prompt("Enter a string of characters: ");
+    let compressedUserInput = "";
+    let counter = 1;
+    for (let i = 0; i < userInput.length; i++) {
+        if (i == 0) {
+            if (userInput[i] != userInput[i+1]) {
+                compressedUserInput += `${counter}${userInput[i]}`;
+            }
+        } else if (userInput[i] == userInput[i-1]) {
+            counter++;
+        } else if (i > 1) {
+            compressedUserInput += `${counter}${userInput[i-1]}`;
+            counter = 1;
+        }
+        if (i == userInput.length-1) {
+            compressedUserInput += `${counter}${userInput[i]}`;
+        }
+    }
+    alert(`Your compressed input is: ${compressedUserInput}`);
 }
