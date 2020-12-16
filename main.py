@@ -42,7 +42,23 @@ def compress_string():
             compressed_user_input += f"{counter}{char}"
     print(f"Your compressed input is: {compressed_user_input}")
 
+def palindrome():
+    user_input = input("Enter a word or sentence to check if it is a palindrome: ")
+    simplified_input = ""
+    reverse_simplified_input = ""
+    for char in user_input:
+        # Checks if character (or string) is comprised of alpha-numeric characters
+        if char.isalnum():
+            simplified_input += char.lower()
+            reverse_simplified_input = char.lower() + reverse_simplified_input
+    if simplified_input == reverse_simplified_input:
+        print("This is a palindrome")
+    else:
+        print("This is not a palindrome")
+
+
 #fizzbuzz()
 #reverse_string()
 #capitalize_first_letters()
-compress_string()
+#compress_string()
+palindrome()

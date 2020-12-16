@@ -10,7 +10,8 @@ namespace MyWhiteBoardProblems
             //FizzBuzz();
             //ReverseString();
             //CapitalizeFirstLetters();
-            CompressString();
+            //CompressString();
+            Palindrome();
         }
 
         public static void FizzBuzz()
@@ -102,6 +103,31 @@ namespace MyWhiteBoardProblems
                 }
             }
             Console.WriteLine($"Your compressed input is {compressedUserInput.ToString()}");
+        }
+
+        public static void Palindrome()
+        {
+            Console.Write("Enter a word or phrase to check if it is a palindrome: ");
+            string userInput = Console.ReadLine();
+            StringBuilder simplifiedInput = new StringBuilder();
+            StringBuilder reversedSimplifiedInput = new StringBuilder();
+            for (int i = 0; i < userInput.Length; i++)
+            {
+                if (Char.IsLetterOrDigit(userInput[i]))
+                {
+                    simplifiedInput.Append(Char.ToLower(userInput[i]));
+                    reversedSimplifiedInput.Insert(0, Char.ToLower(userInput[i]));
+                }
+            }
+            // Make sure to only check string value of StringBuilder object
+            if (simplifiedInput.ToString() == reversedSimplifiedInput.ToString())
+            {
+                Console.WriteLine("This is a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("This is not a palindrome");
+            }
         }
     }
 }

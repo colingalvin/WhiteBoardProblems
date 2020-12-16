@@ -59,3 +59,21 @@ function compressString() {
     }
     alert(`Your compressed input is: ${compressedUserInput}`);
 }
+
+function palindrome() {
+    let userInput = prompt("Enter a word or string to check if it is a palindrome:");
+    let simplifiedInput = "";
+    let reverseSimplifiedInput = "";
+    for(let i = 0; i < userInput.length; i++) {
+        // Regular expression; .test() returns boolean
+        if(/[a-z0-9]/i.test(userInput[i])) {
+            simplifiedInput += userInput[i].toLowerCase();
+            reverseSimplifiedInput = userInput[i].toLowerCase() + reverseSimplifiedInput;
+        }
+    }
+    if(simplifiedInput === reverseSimplifiedInput) {
+        alert("This is a palindrome");
+    } else {
+        alert("This is not a palindrome");
+    }
+}
