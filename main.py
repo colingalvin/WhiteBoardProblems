@@ -1,3 +1,5 @@
+import math
+
 def fizzbuzz():
     x = range(100)
     for n in x:
@@ -56,9 +58,26 @@ def palindrome():
     else:
         print("This is not a palindrome")
 
+def happy_number():
+    user_input = input("Enter a number to check if it is a happy number: ")
+    current_number = user_input
+    new_number = 0
+    counter = 0
+    while counter < 1000 and current_number != "1":
+        new_number = 0
+        for i, char in enumerate(current_number):
+            # math.pow() returns float
+            new_number += int(math.pow(int(char), 2))
+        current_number = str(new_number)
+        counter += 1
+    if counter == 1000 or current_number != "1":
+        print(f"After 1000 iterations, {user_input} has not been proven to be a happy number")
+    else:
+        print(f"{user_input} is a happy number!")
 
 #fizzbuzz()
 #reverse_string()
 #capitalize_first_letters()
 #compress_string()
-palindrome()
+#palindrome()
+happy_number()

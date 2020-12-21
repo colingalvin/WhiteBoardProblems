@@ -77,3 +77,22 @@ function palindrome() {
         alert("This is not a palindrome");
     }
 }
+
+function happyNumber() {
+    let userInput = prompt("Enter a number to check if it is a happy number: ");
+    let currentNumber = userInput;
+    let counter = 0;
+    do {
+        let newNumber = 0;
+        for(let i = 0; i < currentNumber.length; i++) {
+            newNumber += Number(currentNumber[i]);
+        }
+        currentNumber = String(newNumber);
+        counter++;
+    } while(counter < 1000 && currentNumber !== "1");
+    if(counter === 1000 || currentNumber !== "1") {
+        alert(`After 1000 iterations, ${userInput} has not been proven to be a happy number.`);
+    } else {
+        alert(`${userInput} is a happy number!`);
+    }
+}

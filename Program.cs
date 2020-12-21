@@ -11,7 +11,8 @@ namespace MyWhiteBoardProblems
             //ReverseString();
             //CapitalizeFirstLetters();
             //CompressString();
-            Palindrome();
+            //Palindrome();
+            HappyNumber();
         }
 
         public static void FizzBuzz()
@@ -127,6 +128,33 @@ namespace MyWhiteBoardProblems
             else
             {
                 Console.WriteLine("This is not a palindrome");
+            }
+        }
+
+        public static void HappyNumber()
+        {
+            Console.Write("Enter a number to check of it is a happy number: ");
+            string userInput = Console.ReadLine();
+            string currentNumber = userInput;
+            int counter = 0;
+            do
+            {
+                double newNumber = 0;
+                for (int i = 0; i < currentNumber.Length; i++)
+                {
+                    newNumber += Math.Pow(Convert.ToDouble(currentNumber[i].ToString()), 2);
+                }
+                currentNumber = newNumber.ToString();
+                counter++;
+            }
+            while (currentNumber != "1" && counter < 1000);
+            if (counter == 1000 || currentNumber != "1")
+            {
+                Console.Write($"After 1,000 iterations, {userInput} has not been shown to be a happy number");
+            }
+            else
+            {
+                Console.Write($"{userInput} is a happy number!");
             }
         }
     }
