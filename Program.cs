@@ -13,7 +13,8 @@ namespace MyWhiteBoardProblems
             //CompressString();
             //Palindrome();
             //HappyNumber();
-            Fibonacci();
+            //Fibonacci();
+            TargetNumber();
         }
 
         public static void FizzBuzz()
@@ -171,6 +172,34 @@ namespace MyWhiteBoardProblems
                 k = j;
                 j = i;
                 i = j + k;
+            }
+        }
+
+        public static void TargetNumber()
+        {
+            Console.Write("Enter a string of numbers separated by one space: ");
+            string userNumbers = Console.ReadLine();
+            Console.Write("Enter a target sum: ");
+            string userTarget = Console.ReadLine();
+            string[] numbersArray = userNumbers.Split(' ');
+            int sum;
+            bool solutionFound = false;
+            for (int i = 0; i < numbersArray.Length - 1; i++)
+            {
+                for (int j = 1; j < numbersArray.Length; j++)
+                {
+                    sum = Convert.ToInt32(numbersArray[i]) + Convert.ToInt32(numbersArray[j]);
+                    if (sum == Convert.ToInt32(userTarget))
+                    {
+                        Console.Write($"Indices {i} ({numbersArray[i]}) and {j} ({numbersArray[j]}) yield the target {userTarget}");
+                        solutionFound = true;
+                        continue;
+                    }
+                }
+            }
+            if (!solutionFound)
+            {
+                Console.Write("There was no solution found for the given numbers and target");
             }
         }
     }

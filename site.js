@@ -110,3 +110,21 @@ function fibonacci() {
     }
     alert(`The first 20 numbers of the Fibonacci sequence are: \n${sequence.join(`\n`)}`);
 }
+
+function targetNumber() {
+    let userNumbers = prompt("Enter a string of numbers separated by one space:");
+    let userTarget = prompt("Enter a target sum:");
+    let numbersArray = userNumbers.split(' ');
+    let solutionFound = false;
+    for(let i = 0; i < numbersArray.length - 1; i++) {
+        for(let j = 1; j < numbersArray.length; j++) {
+            if(Number(numbersArray[i]) + Number(numbersArray[j]) == Number(userTarget)) {
+                alert(`Indices ${i} (${numbersArray[i]}) and ${j} (${numbersArray[j]}) yield target ${userTarget}`);
+                solutionFound = true;
+            }
+        }
+    }
+    if(!solutionFound) {
+        alert("There was no solution found for the given numbers and target");
+    }
+}

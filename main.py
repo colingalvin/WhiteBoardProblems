@@ -88,10 +88,25 @@ def fibonacci():
         i = j + k
         counter += 1
 
+def target_number():
+    user_numbers = input("Enter a string of numbers separated by one space: ")
+    user_target = input("Enter a target sum: ")
+    numbers_list = user_numbers.split()
+    solution_found = False
+    for i in range(len(numbers_list)):
+        for j in range(i, len(numbers_list)):
+            if int(numbers_list[i]) + int(numbers_list[j]) == int(user_target):
+                print(f"Indices {i} ({numbers_list[i]}) and {j} ({numbers_list[j]}) yields target {user_target}")
+                solution_found = True
+    if(solution_found == False):
+        print("There was no solution found for the given numbers and target")
+
+
 #fizzbuzz()
 #reverse_string()
 #capitalize_first_letters()
 #compress_string()
 #palindrome()
 #happy_number()
-fibonacci()
+#fibonacci()
+target_number()
