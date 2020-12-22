@@ -12,7 +12,8 @@ namespace MyWhiteBoardProblems
             //CapitalizeFirstLetters();
             //CompressString();
             //Palindrome();
-            HappyNumber();
+            //HappyNumber();
+            Fibonacci();
         }
 
         public static void FizzBuzz()
@@ -155,6 +156,21 @@ namespace MyWhiteBoardProblems
             else
             {
                 Console.Write($"{userInput} is a happy number!");
+            }
+        }
+
+        public static void Fibonacci()
+        {
+            Console.WriteLine("The first 20 numbers of the Fibonacci sequence are:");
+            int i = 1;
+            int j = 0; // Previous number
+            int k = 0; // Second previous number
+            for (int counter = 0; counter < 20; counter++)
+            {
+                Console.WriteLine(i);
+                k = j;
+                j = i;
+                i = j + k;
             }
         }
     }

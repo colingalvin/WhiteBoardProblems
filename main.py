@@ -75,9 +75,23 @@ def happy_number():
     else:
         print(f"{user_input} is a happy number!")
 
+def fibonacci():
+    print("The first 20 numbers of the Fibonacci sequence are:")
+    counter = 0
+    i = 1
+    j = 0
+    k = 0
+    while counter < 20:
+        print(i)
+        k = j
+        j = i
+        i = j + k
+        counter += 1
+
 #fizzbuzz()
 #reverse_string()
 #capitalize_first_letters()
 #compress_string()
 #palindrome()
-happy_number()
+#happy_number()
+fibonacci()

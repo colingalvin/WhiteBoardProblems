@@ -96,3 +96,17 @@ function happyNumber() {
         alert(`${userInput} is a happy number!`);
     }
 }
+
+function fibonacci() {
+    let i = 1;
+    let j = 0;
+    let k = 0;
+    let sequence = [];
+    for(let counter = 0; counter < 20; counter++) {
+        sequence.push(i);
+        k = j;
+        j = i;
+        i = j + k;
+    }
+    alert(`The first 20 numbers of the Fibonacci sequence are: \n${sequence.join(`\n`)}`);
+}
