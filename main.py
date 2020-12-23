@@ -19,7 +19,6 @@ def reverse_string():
 def capitalize_first_letters():
     user_input = input("Enter words to be capitalized: ")
     capitalized_user_input = ""
-    #forgot to include enumerate
     for i, char in enumerate(user_input):
         if i == 0 or user_input[i-1] == " ":
             capitalized_user_input += char.upper()
@@ -49,7 +48,6 @@ def palindrome():
     simplified_input = ""
     reverse_simplified_input = ""
     for char in user_input:
-        # Checks if character (or string) is comprised of alpha-numeric characters
         if char.isalnum():
             simplified_input += char.lower()
             reverse_simplified_input = char.lower() + reverse_simplified_input
@@ -66,7 +64,6 @@ def happy_number():
     while counter < 1000 and current_number != "1":
         new_number = 0
         for i, char in enumerate(current_number):
-            # math.pow() returns float
             new_number += int(math.pow(int(char), 2))
         current_number = str(new_number)
         counter += 1
@@ -74,6 +71,17 @@ def happy_number():
         print(f"After 1000 iterations, {user_input} has not been proven to be a happy number")
     else:
         print(f"{user_input} is a happy number!")
+
+def prime_number():
+    user_input = int(input("Enter a positive number to check if it is prime: "))
+    counter = 0
+    for i in range(1, user_input+1):
+        if user_input % i == 0:
+            counter += 1
+    if counter <= 2:
+        print(f"{user_input} is a prime number!")
+    else:
+        print(f"{user_input} is not a prime number :(")
 
 def fibonacci():
     print("The first 20 numbers of the Fibonacci sequence are:")
@@ -108,5 +116,6 @@ def target_number():
 #compress_string()
 #palindrome()
 #happy_number()
+prime_number()
 #fibonacci()
-target_number()
+#target_number()

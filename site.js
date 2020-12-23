@@ -65,7 +65,6 @@ function palindrome() {
     let simplifiedInput = "";
     let reverseSimplifiedInput = "";
     for(let i = 0; i < userInput.length; i++) {
-        // Regular expression; .test() returns boolean
         if(/[a-z0-9]/i.test(userInput[i])) {
             simplifiedInput += userInput[i].toLowerCase();
             reverseSimplifiedInput = userInput[i].toLowerCase() + reverseSimplifiedInput;
@@ -94,6 +93,21 @@ function happyNumber() {
         alert(`After 1000 iterations, ${userInput} has not been proven to be a happy number.`);
     } else {
         alert(`${userInput} is a happy number!`);
+    }
+}
+
+function primeNumber() {
+    let userInput = Number(prompt("Enter a positive number to check if it is a prime number:"));
+    let counter = 0;
+    for(let i = 1; i <= userInput; i++) {
+        if(userInput % i == 0) {
+            counter++;
+        }
+    }
+    if(counter <= 2) {
+        alert(`${userInput} is a prime number!`);
+    } else {
+        alert(`${userInput} is not a prime number :(`);
     }
 }
 

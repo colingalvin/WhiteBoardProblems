@@ -13,8 +13,9 @@ namespace MyWhiteBoardProblems
             //CompressString();
             //Palindrome();
             //HappyNumber();
+            PrimeNumber();
             //Fibonacci();
-            TargetNumber();
+            //TargetNumber();
         }
 
         public static void FizzBuzz()
@@ -61,7 +62,6 @@ namespace MyWhiteBoardProblems
             {
                 if (i == 0 || userInput[i - 1] == ' ')
                 {
-                    //forgot to include .ToString()
                     capitalizedUserInput.Append(userInput[i].ToString().ToUpper());
                 }
                 else
@@ -82,8 +82,6 @@ namespace MyWhiteBoardProblems
             {
                 if (i == 0)
                 {
-                    // Need to separate this logic into another if statement so that the program
-                    // does not check for an index that is out of range with userInput[i + 1]
                     if (userInput[i] != userInput[i + 1])
                     {
                         compressedUserInput.Append($"{counter}{userInput[i]}");
@@ -93,10 +91,8 @@ namespace MyWhiteBoardProblems
                 {
                     counter++;
                 }
-                // Creates exception to not double-return a unique first character
                 else if (i > 1)
                 {
-                    // Formatting for StringBuilder
                     compressedUserInput.Append($"{counter}{userInput[i - 1]}");
                     counter = 1;
                 }
@@ -157,6 +153,28 @@ namespace MyWhiteBoardProblems
             else
             {
                 Console.Write($"{userInput} is a happy number!");
+            }
+        }
+
+        public static void PrimeNumber()
+        {
+            Console.Write("Enter a positive integer to check if it is prime: ");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            int counter = 0;
+            for (int i = 1; i <= userInput; i++)
+            {
+                if (userInput % i == 0)
+                {
+                    counter++;
+                }
+            }
+            if (counter <= 2)
+            {
+                Console.Write($"{userInput} is a prime number!");
+            }
+            else
+            {
+                Console.Write($"{userInput} is not a prime number :(");
             }
         }
 
