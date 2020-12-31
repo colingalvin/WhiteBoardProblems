@@ -116,6 +116,6 @@ def target_number():
 #compress_string()
 #palindrome()
 #happy_number()
-prime_number()
+#prime_number()
 #fibonacci()
 #target_number()
