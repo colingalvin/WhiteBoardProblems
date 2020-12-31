@@ -13,7 +13,7 @@ namespace MyWhiteBoardProblems
             //CompressString();
             //Palindrome();
             //HappyNumber();
-            PrimeNumber();
+            //PrimeNumber();
             //Fibonacci();
             //TargetNumber();
         }
